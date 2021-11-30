@@ -1,0 +1,17 @@
+.cart-item {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.2em;
+}
+
+.cart-item > * {
+	margin: 0.2em;
+}
+
+/* 
+CSS-enheter
+em	Relativ enhet - förhåller sig till aktuella teckenstorleken
+rem	Som em, men förhåller sig till teckenstorleken i body
+px	Absolut enhet
+mm	Absolut enhet
+*/

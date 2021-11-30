@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { shallow, render as renderEnzyme, mount } from 'enzyme'
+import { shallow /*, render as renderEnzyme*/, mount } from 'enzyme'
 import App from './App';
 
 describe('App component', () => {
@@ -10,15 +10,15 @@ describe('App component', () => {
 
 	test('renders learn react link', () => {
 		render(<App />);
-		const linkElement = screen.getByText(/learn react/i);
+		const linkElement = screen.getByText(/learn react/i);  // regular expression: sök efter "learn react", case insensitive
 		expect(linkElement).toBeInTheDocument();
 	});
 
     it('renders without errors (smoke test) (Enzyme shallow)', () => {
-        const wrapper = shallow(<App />)
+        /*const wrapper =*/ shallow(<App />)
     })
     it('renders without errors (smoke test) (Enzyme mount)', () => {
-        const wrapper = mount(<App />)
+        /*const wrapper =*/ mount(<App />)
     })
 	// shallow, render as renderEnzyme, mount
 	// shallow rendering: bara komponenten, hoppar över child components
